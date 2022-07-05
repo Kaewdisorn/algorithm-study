@@ -28,11 +28,9 @@ void main() {
   List nums = [3,2,4];
   int target = 6;
   Stopwatch stopwatch = new Stopwatch()..start();
-  //print(twoSumWhile(nums, target));
-  for (var i = 0; i < 5; i++) {
-    print(twoSumWhile(nums, target));
-    print('time usage ${stopwatch.elapsed}');
-  }
+  print(twoSumWhile(nums, target));
+  print('time usage ${stopwatch.elapsed}');
+
 }
 
 List<int> twoSumWhile(nums,target){
