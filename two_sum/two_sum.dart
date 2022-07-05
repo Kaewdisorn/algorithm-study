@@ -27,9 +27,18 @@
 void main() {
   List nums = [3,2,4];
   int target = 6;
-  List ansIndex = [];
+  Stopwatch stopwatch = new Stopwatch()..start();
+  //print(twoSumWhile(nums, target));
+  for (var i = 0; i < 5; i++) {
+    print(twoSumWhile(nums, target));
+    print('time usage ${stopwatch.elapsed}');
+  }
+}
+
+List<int> twoSumWhile(nums,target){
   int ans = -1;
   int i = 0;
+  List<int> ansIndex = [];
   while (ans != target) {
     ans = nums[i] + nums[i+1];
     if (ans == target) {
@@ -39,6 +48,10 @@ void main() {
       i++;
     }
   }
-  print(ans);
-  print(ansIndex);
+  return ansIndex;
 }
+  //#1 :time usage 0:00:00.002940
+  //#2 :time usage 0:00:00.003064
+  //#3 :time usage 0:00:00.003120
+  //#4 :time usage 0:00:00.003079
+  //#5 :time usage 0:00:00.003165
